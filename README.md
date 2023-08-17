@@ -1,6 +1,6 @@
 # MS_053_F23 | Intro to Computational Media
 
-This is the [website](https://parsonsdt.github.io/critical-computation-2022/) for Intro to Computational Media, an undergraduate-level course at Scripps College.
+This is the [website](https://parsonsdt.github.io/critical-computation-2023/) for Intro to Computational Media, an undergraduate-level course at Scripps College.
 
 ### Faculty
 [Xin Xin](https://xin-xin.info)  
