@@ -171,5 +171,49 @@ table, th, td {
   border: 1px solid;
   border-collapse: collapse;
   font-size:15px;
-  padding: 5px;
+  padding: 15px;
+}
+
+.grid{
+  width: 20vw;
+  height: 20vw;
+  margin: 5vw;
+  background-size: cover;
+  background-blend-mode: saturation;
+}
+
+#grid-cell-2{
+  background-image: linear-gradient(black, black),
+                    url(./assets/2021_2_munus.gif);
+}
+
+#grid-cell-3{
+  background-image: linear-gradient(black, black),
+                    url(./assets/2021_3_yiqing.png);
+}
+#grid-cell-4{
+  background-image: linear-gradient(black, black),
+                    url(./assets/2021_3_yiqing.png);
+}
+#grid-cell-5{
+  background-image: linear-gradient(black, black),
+                    url(./assets/2021_3_yiqing.png);
+}
+
+#grid-cell-6{
+  background-image: linear-gradient(black, black),
+                    url(./assets/2020_9_jasmin.png);
+}
+
+#grid-cell-7{
+  background-image: linear-gradient(black, black),
+                    url(./assets/2020_7_olivier.png);
+}
+#grid-cell-8{
+  background-image: linear-gradient(black, black),
+                    url(./assets/2021_3_yiqing.png);
+}
+#grid-cell-9{
+  background-image: linear-gradient(black, black),
+                    url(./assets/2021_3_yiqing.png);
 }
