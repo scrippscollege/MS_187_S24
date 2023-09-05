@@ -182,7 +182,7 @@ table, th, td {
   background-blend-mode: saturation;
 }
 
-#grid-cell-2{
+/* #grid-cell-2{
   background-image: linear-gradient(black, black),
                     url(./assets/2021_2_munus.gif);
 }
@@ -216,4 +216,4 @@ table, th, td {
 #grid-cell-9{
   background-image: linear-gradient(black, black),
                     url(./assets/2021_3_yiqing.png);
-}
+} */
