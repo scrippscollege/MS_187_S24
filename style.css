@@ -24,6 +24,18 @@
   src: url("https://cdn.glitch.global/df93a140-5a49-4828-bbb2-731ee29b5e22/OpenDyslexic-Bold.otf")
     format("opentype");
 }
+@font-face{
+      font-family: "Bespoke-R40K4cJxyk";
+    src: url("https://cdn.glitch.com/e65c6bfb-f5bf-4ddf-a967-53a0e911a960%2FBespoke-R40K4cJxyk.eot?v=1598689300115");
+    src: url("https://cdn.glitch.com/e65c6bfb-f5bf-4ddf-a967-53a0e911a960%2FBespoke-R40K4cJxyk.eot?v=1598689300115?#iefix")
+        format("embedded-opentype"),
+      url("https://cdn.glitch.com/e65c6bfb-f5bf-4ddf-a967-53a0e911a960%2FBespoke-R40K4cJxyk.woff?v=1598689300606")
+        format("woff"),
+      url("https://cdn.glitch.com/e65c6bfb-f5bf-4ddf-a967-53a0e911a960%2FBespoke-R40K4cJxyk.ttf?v=1598689300806")
+        format("truetype"),
+      url("https://cdn.glitch.com/e65c6bfb-f5bf-4ddf-a967-53a0e911a960%2FBespoke-R40K4cJxyk.svg?v=1598689303109")
+        format("svg");
+}
 @font-face {
   font-family: Open-Dyslexic-Regular;
   src: url("https://cdn.glitch.global/df93a140-5a49-4828-bbb2-731ee29b5e22/OpenDyslexic-Regular.otf")
@@ -40,8 +52,9 @@ figure out license
 testing by sharing it */
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  font-family: sans-serif;
+  font-size: 12pt;
+  line-height: 20pt;
   background-color: var(--color-bg);
   max-width: 90%;
   margin-right: auto;
@@ -180,6 +193,11 @@ table, th, td {
   margin: 5vw;
   background-size: cover;
   background-blend-mode: saturation;
+}
+
+#grid-cell-1{
+  background-image: linear-gradient(black, black),
+  url(./assets/2020_1_ardak.png);
 }
 
 /* #grid-cell-2{
