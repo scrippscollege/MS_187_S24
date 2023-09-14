@@ -200,11 +200,12 @@ table, th, td {
   url(./assets/2020_1_ardak.png);
 }
 
-/* #grid-cell-2{
+#grid-cell-2{
   background-image: linear-gradient(black, black),
                     url(./assets/2021_2_munus.gif);
 }
 
+/* 
 #grid-cell-3{
   background-image: linear-gradient(black, black),
                     url(./assets/2021_3_yiqing.png);
