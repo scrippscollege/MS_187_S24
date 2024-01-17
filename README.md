@@ -1,6 +1,6 @@
-# MS_053_F24 | Intro to Computational Media
+# MS_139_S24 | Socially-Engaged Software
 
-This is the [website](https://scrippscollege.github.io/MS_053_F23/) for Intro to Computational Media, an undergraduate-level course at Scripps College.
+This is the [website](https://scrippscollege.github.io/MS_139_S24/) for Socially-Engaged Software, an undergraduate-level course at Scripps College.
 
 ### Faculty
 [Xin Xin](https://xin-xin.info)  
@@ -8,11 +8,4 @@ xxin@scrippscollege.edu
 
 ## Course Descriptions
 
-This is an introductory course in computation within context of media and art with a focus on two-dimensional graphics. The potential of computer as medium will be considered through exercises, assignments, readings, and critiques. Both procedural and object-oriented programming will be explored, as well as, using input and output of files, generative techniques, and image creation through data processing.
-
-## Learning Outcomes
-
-1. Apply critical thinking in writing and oral presentation skills
-1. Analyze the social and cultural importance of computational media art
-1. Use technical proficiency to create computational media art
-1. Create a two-dimensional computational-based project
+This course introduces the theories and practices of socially-engaged software, a DIY and grassroots approach to making software that challenges society?s pre-existing power relations. Through archival materials, technical demonstrations, and site visits, we will study how hackers, activists, and artists incorporate software to challenge authoritarian regimes and uplift communities. Students will form independent research topics throughout the semester and study software as a cultural artifact.
