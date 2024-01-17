@@ -1,4 +1,4 @@
-# MS_053_F23 | Intro to Computational Media
+# MS_053_F24 | Intro to Computational Media
 
 This is the [website](https://scrippscollege.github.io/MS_053_F23/) for Intro to Computational Media, an undergraduate-level course at Scripps College.
 
