@@ -64,5 +64,212 @@
       <li>2.4 random() (<a href="https://www.youtube.com/watch?v=POn4cZ0jL-o&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=11">YouTube</a>), Coding Train</li>
       <li>7.2 Mouse & Key Inputs (<a href="https://www.youtube.com/watch?v=asvnmtVjeEk">YouTube</a>), Xin Xin</li>
     </ul>
+
+    <h3>Study Guide</h3>
+    <div id="basic"><h2>Working with Local Data</h2></div>
+
+    <h3>
+      Loading & Displaying Data
+    </h3>
+
+    <p>
+      <a href="https://p5js.org/reference/#/p5/loadTable">loadTable()</a>
+      is a p5 function that reads the contents of a CSV file and creates a
+      <a href="https://p5js.org/reference/#/p5.Table">p5.Table</a> object with
+      its values. The CSV file must either be located in the sketch's folder
+      or elsewhere online.
+    </p>
+    <div class="full-width-box">
+      <img
+        src="https://cdn.images.fecom-media.com/HE1546624_160911-HOP-ENG-P01.jpg?width=348"
+      />
+    </div>
+    <p>
+      Using loadTable() with a local CSV file, let's try to recreate the
+      "sentence flip book" children often use to learn how to construct
+      sentences. First, open your desktop spreadsheet software (e.g. Excel) or
+      Google spreadsheet, and let's create a couple possible sentences for the
+      flip book. In the example below I'm using a name, a verb, and a food
+      item to construct every sentence. Keep in mind that these sentences must
+      follow the rules of modular design, so that different combinations of
+      the words would still make out logical sentences.
+    </p>
+    <p>
+      Once you're done with that, download the spreadsheet as a CSV file, and
+      upload it to your p5 sketch folder. When you click on the CSV file
+      inside the p5 editor, you should see something like this:
+    </p>
+    <div class="full-width-box">
+      <img
+        src="https://cdn.glitch.com/5dd99b18-3ebb-45c5-90fb-b4b67dc2e128%2FScreen%20Shot%202020-02-26%20at%201.25.08%20AM.png?v=1582698317988"
+      />
+    </div>
+
+    <p>
+      If you look carefully, you might notice that every new line creates a
+      new row, and every comma creates a new column. You can edit your CSV
+      file inside the editor if you decide that something needs to change.
+    </p>
+
+    <p>
+      Great! Now let's load the table into the sketch! Just like loading any
+      other files in p5, you need to load the CSV file using
+      <i>function preload()</i>. Also, inside the p5.Table object, there are a
+      couple methods you should know about in order to properly load and
+      display the data:
+    </p>
+    <ul>
+      <li class="bullet">
+        <a href="https://p5js.org/reference/#/p5.Table/getString"
+          >getString(row, column)</a
+        >: retrieves a String value from the Table's specified row and column.
+        Based on the example above, <i>getString(0,0)</i> will retrieve the
+        word "Anshuman", and <i>getString(3,2)</i> will retrieve "dumplings"
+      </li>
+      <li class="bullet">
+        <a href="https://p5js.org/reference/#/p5.Table/getColumnCount"
+          >getColumnCount()</a
+        >
+        or
+        <a href="https://p5js.org/reference/#/p5.Table/getRowCount"
+          >getRowCount()</a
+        >: returns the total number of columns or rows in a Table. It's used
+        in a similar way as array.length
+      </li>
+    </ul>
+    <div class="full-width-box">
+      <iframe src="https://editor.p5js.org/xinxin/embed/hb73hbbK"></iframe>
+      <p>&#8627; click to randomize sentence</p>
+
+      <p>
+        To put it all together, I have used <i>random()</i> to generate three
+        different row numbers within the range of <i>getRowCount()</i> at the
+        start of the sketch as well as when every time mouse is pressed. And I
+        use <i>text()</i> three times to load the possible sentences
+        individually:
+      </p>
+    </div>
+    <div class="full-width-box">
+      <script src="https://gist.github.com/xinemata/aacbce3f23bcddff8b82b8380c7987e5.js"></script>
+    </div>
+    <a href="https://editor.p5js.org/xinxin/sketches/hb73hbbK"
+      >Link to Source Code</a
+    >
+
+    <p>
+      So while you're trying this out on your own, you might have noticed that
+      a couple lines are being repeated a couple different times to do similar
+      things. You could try to combine them into for Loops to write less lines
+      of code. However, you'd need to turn your <i>row1</i>, <i>row2</i>, and
+      <i>row3</i> variables into a <i>row[]</i> array in order to load them
+      properly. Here's the
+      <a href="https://editor.p5js.org/xinxin/sketches/n_1zbjwh"
+        >optimized version</a
+      >
+      of the code above.
+    </p>
+
+    <h3>
+      Overwriting Data
+    </h3>
+
+    <p>
+      Now that we know how to load data from a CSV file and turn it into a
+      p5.Table object. Let's learn how to overwrite a cell value inside a
+      table object using
+      <a href="https://p5js.org/reference/#/p5.Table/set"
+        >set(row, column, value)</a
+      >. Add the lines below to the end of setup() inside the previous code
+      example:
+    </p>
+
+    <script src="https://gist.github.com/xinemata/ffe3e8bd8d75785e21a245380834581b.js"></script>
+    <p>
+      Now when you click on the screen, you should see that column 0 - row 0
+      has now been set to "Chloe":
+    </p>
+    <iframe src="https://editor.p5js.org/xinxin/embed/SBGCIRZo"></iframe>
+
+    <a href="https://editor.p5js.org/xinxin/sketches/SBGCIRZo"
+      >Link to Source Code</a
+    >
+    <p>
+      There are
+      <a href="https://p5js.org/reference/#/p5.Table">many other methods</a>
+      you could use under p5.Table that goes beyond what has been mentioned
+      above. Take a look at them to get a sense of what's possible.
+    </p>
+
+    <div id="join">
+      <h2>
+        JavaScript join()
+      </h2>
+    </div>
+    <p>
+      In the examples above, each word has a position X and Y. What if we want
+      to connect the words together so that there are no spacings in between?
+      This is where
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
+        >JavaScript join()</a
+      >
+      comes in handy. join() is a method that connects all the items inside an
+      array together to form a string. For instance, copy & paste the code
+      below into your p5 editor:
+    </p>
+
+    <script src="https://gist.github.com/xinemata/c9be3e001d14eda3b34b1b6657939a95.js"></script>
+
+    <p>
+      Now try to replace <i>sentence.join(" ")</i> to
+      <i>sentence.join("-")</i>:
+    </p>
+
+    <script src="https://gist.github.com/xinemata/7b896ff92dfb127dda6ee5e31eb288f7.js"></script>
+    <p>
+      You will see that console now prints 'I-&lt3-programming'. Essentially,
+      join() makes all the items inside an array hold hands with each other!
+    </p>
+
+    <p>
+      Next, let's add join() and splice() to our previous example, so that
+      when mouse is pressed, splice() will add sentences to an empty array,
+      and join() will help to format the sentence.
+    </p>
+
+    <iframe src="https://editor.p5js.org/xinxin/embed/Mqn01a4f"></iframe>
+    <p>&#8627; click to add sentence to the array</p>
+
+    <script src="https://gist.github.com/xinemata/5105f0f6f122081e05a3b4ff2fade9b7.js"></script>
+
+    <a href="https://editor.p5js.org/xinxin/sketches/Mqn01a4f"
+      >Link to Source Code</a
+    >
+
+    <div id="substring">
+      <h2>
+        JavaScript substring()
+      </h2>
+    </div>
+
+    <p>
+      The
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring"
+        >substring()</a
+      >
+      method lets you access and load part of a string. The method takes up to
+      two parameters: the start of the index and the end of the index. By
+      using this method, we could create a typewriter effect inside our
+      sketch. This makes the reading experience more engaging and less
+      daunting, especially when you're displaying a large amount of texts:
+    </p>
+
+    <iframe src="https://editor.p5js.org/xinxin/embed/_HvJLGKo"></iframe>
+    <p>&#8627; click to see the typewriter effect</p>
+    <script src="https://gist.github.com/xinemata/8b4534d0d9de9cb84aa216715fa85270.js"></script>
+    <a href="https://editor.p5js.org/xinxin/sketches/_HvJLGKo"
+      >Link to Source Code</a
+    >
   </main>
 </html>
